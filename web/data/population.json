@@ -1,0 +1,12 @@
+[
+    { "distrito": "Ciutat Vella", "poblacion": 135000 },
+    { "distrito": "L'Eixample", "poblacion": 255000 },
+    { "distrito": "Ruzafa", "poblacion": 85000 },
+    { "distrito": "Campanar", "poblacion": 180000 },
+    { "distrito": "Benimaclet", "poblacion": 120000 },
+    { "distrito": "La Saïdia", "poblacion": 95000 },
+    { "distrito": "Benicalap", "poblacion": 110000 },
+    { "distrito": "Poblats Marítims", "poblacion": 70000 },
+    { "distrito": "Torrente", "poblacion": 200000 },
+    { "distrito": "Camins al Grau", "poblacion": 90000 }
+]

@@ -1,0 +1,46 @@
+.contenedor-grafico {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 2rem auto;
+}
+
+.tooltip {
+    position: absolute;
+    background: white;
+    border: 1px solid #aaa;
+    padding: 6px 10px;
+    font-size: 12px;
+    border-radius: 4px;
+    pointer-events: none;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.line {
+    fill: none;
+    stroke-width: 2.5px;
+}
+
+.checkbox-container {
+    margin-bottom: 10px;
+}
+
+
+.checkbox-container label {
+    margin-right: 15px;
+    padding: 3px 6px;
+    border-radius: 3px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+svg {
+    overflow: visible;
+}
+
+input[type="checkbox"] {
+    transform: scale(1.1);
+    margin-right: 4px;
+    vertical-align: middle;
+}

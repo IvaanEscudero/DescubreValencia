@@ -1,0 +1,24 @@
+#gameForm {
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.gameContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    border-left: 0;
+   
+}
+
+.gameCanvas {
+    display: none;
+    width: 100%;
+    height: 100%;
+    max-width: 100vh;
+    max-height: 100vh;
+}

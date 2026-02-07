@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Descubre Valencia</title>
+    <link rel="icon" type="image/x-icon" href="img/icon.ico">
+
+    <!-- External CSS Libraries -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="./css/base.css">
+    <link rel="stylesheet" href="./css/cards.css">
+    <link rel="stylesheet" href="./css/canva.css">
+    <link rel="stylesheet" href="./css/datos.css">
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+</head>
+
+<body>
+    <!-- Custom Header Component -->
+    <my-header></my-header>
+
+    <main>
+
+        <!-- Section: Interactive Map -->
+        <section class="container py-5" aria-label="Interactive Map of Valencia">
+            <h1 class="mb-4">Mapa Interactivo de Valencia</h1>
+
+            <div class="row mt-4">
+                <!-- Game Settings Form -->
+                <div class="col-12 col-md-4">
+                    <form id="gameForm">
+                        <div class="mb-3">
+                            <label for="playerName" class="form-label">Nombre del Jugador</label>
+                            <input type="text" class="form-control" id="playerName" placeholder="Ingresa tu nombre" required>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="playerSpeed" class="form-label">Velocidad del Jugador</label>
+                            <input type="number" class="form-control" id="playerSpeed" min="1" max="10" value="5" required>
+                            <div class="form-text">La velocidad debe estar entre 1 y 10.</div>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="numPlaces" class="form-label">Número de Lugares a Encontrar</label>
+                            <input type="number" class="form-control" id="numPlaces" min="1" max="10" value="5" required>
+                            <div class="form-text">Debes encontrar entre 1 y 10 lugares.</div>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="difficulty" class="form-label">Dificultad</label>
+                            <select class="form-select" id="difficulty" required>
+                                <option value="low" selected>Baja</option>
+                                <option value="medium">Media</option>
+                                <option value="high">Alta</option>
+                            </select>
+                            <div class="form-text">Selecciona la dificultad del juego.</div>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary w-100">Iniciar Juego</button>
+                    </form>
+                </div>
+
+                <!-- Canvas Display -->
+                <div class="col-12 col-md-8">
+                    <p id="textGame" class="text-center">Pulse "Iniciar Juego" en el panel izquierdo para iniciar</p>
+                    <canvas id="gameCanvas" class="gameCanvas" width="1000" height="800"></canvas>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section: Data Visualization -->
+            <section class="container py-5" id="data-visualization">
+            <h1 class="text-center mb-5">Visualización de Datos: Estudio de la Población de Valencia</h1>
+
+            <div class="row">
+                <div class="col-12">
+                    <div id="chart" class="display: flex; justify-content: center;"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section: Affluence by Leisure Zones -->
+        <section class="container py-5" aria-label="Afluencia por Zonas de Ocio en Valencia">
+            <h1 class="text-center mb-5">Afluencia por Zonas de Ocio en Valencia</h1>
+
+             <div class="row">
+                <div class="col-12">
+                    <div id="chart2" style="display: flex; justify-content: center;"></div>
+                    <div id="zona-filtros" style="margin: 1rem auto; width: max-content;"></div>
+                </div>
+            </div>
+        </section>
+        <!-- Section: Explore More -->
+        <section class="container py-5" aria-label="Explore More in Valencia">
+            <h2 class="text-center mb-5">Explorar Más</h2>
+
+            <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+
+                <!-- Card: Points of Interest -->
+                <article class="col">
+                    <div class="card shadow-sm h-100">
+                        <img src="./img/lugar_interes.jpg" class="card-img-top" alt="Lugares de interés en Valencia">
+                        <div class="card-body">
+                            <h3 class="card-title">Lugares de Interés</h3>
+                            <p class="card-text">Descubre los mejores lugares para visitar en Valencia: desde la Ciudad de las Artes y las Ciencias hasta los encantadores barrios antiguos.</p>
+                            <a href="#" class="btn btn-primary">Leer Más</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Card: Food Routes -->
+                <article class="col">
+                    <div class="card shadow-sm h-100">
+                        <img src="./img/rutas.jpg" class="card-img-top" alt="Rutas Gastronómicas">
+                        <div class="card-body">
+                            <h3 class="card-title">Rutas Gastronómicas</h3>
+                            <p class="card-text">Sumérgete en la gastronomía valenciana con nuestras rutas de tapas, platos tradicionales y opciones internacionales.</p>
+                            <a href="#" class="btn btn-primary">Leer Más</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Card: Local Festivities -->
+                <article class="col">
+                    <div class="card shadow-sm h-100">
+                        <img src="./img/fallas.jpg" class="card-img-top" alt="Festividades Locales">
+                        <div class="card-body">
+                            <h3 class="card-title">Festividades Locales</h3>
+                            <p class="card-text">Vive la emoción de las Fallas, la Tomatina y otros eventos únicos que hacen de Valencia un destino vibrante todo el año.</p>
+                            <a href="#" class="btn btn-primary">Leer Más</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Card: Nightlife -->
+                <article class="col">
+                    <div class="card shadow-sm h-100">
+                        <img src="./img/nocturno.jpg" class="card-img-top" alt="Vida Nocturna en Valencia">
+                        <div class="card-body">
+                            <h3 class="card-title">Vida Nocturna</h3>
+                            <p class="card-text">Conoce los bares, discotecas y pubs más populares de Valencia. Ideal para disfrutar con amigos o en pareja.</p>
+                            <a href="#" class="btn btn-primary">Leer Más</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Card: Outdoor Activities -->
+                <article class="col">
+                    <div class="card shadow-sm h-100">
+                        <img src="./img/libre.jpg" class="card-img-top" alt="Actividades al Aire Libre">
+                        <div class="card-body">
+                            <h3 class="card-title">Actividades al Aire Libre</h3>
+                            <p class="card-text">Desde senderismo en parques naturales hasta paseos en barco por la costa. Disfruta de Valencia al aire libre.</p>
+                            <a href="#" class="btn btn-primary">Leer Más</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Card: Local Interviews -->
+                <article class="col">
+                    <div class="card shadow-sm h-100">
+                        <img src="./img/entrevistas.jpg" class="card-img-top" alt="Entrevistas Locales">
+                        <div class="card-body">
+                            <h3 class="card-title">Entrevistas Locales</h3>
+                            <p class="card-text">Conoce las historias de los valencianos: artistas, emprendedores y personas que dan vida a la ciudad.</p>
+                            <a href="#" class="btn btn-primary">Leer Más</a>
+                        </div>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+    </main>
+
+    <!-- Custom Card Component -->
+    <my-cards></my-cards>
+
+    <!-- Custom Footer Component -->
+    <my-footer></my-footer>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+
+    <!-- Icons -->
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+
+    <!-- D3.js Library -->
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+
+    <!-- Custom JavaScript Files -->
+    <script src="js/base.js"></script>
+    <script src="js/game.js"></script>
+    <script src="js/d3.js"></script>
+    <script src="js/d3_afluencia.js"></script>

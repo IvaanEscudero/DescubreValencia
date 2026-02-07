@@ -1,0 +1,14 @@
+.DS_Store
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+*.log
+npm-debug.log*
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+node_modules/
+package-lock.json
+tmp/
+temp/

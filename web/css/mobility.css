@@ -1,0 +1,21 @@
+.map {
+    margin-top: 2rem !important;
+    width: 100%;
+    margin-top: 20px;
+    height: 600px;
+}
+
+.info-container{
+    display: flex;
+    justify-content: stretch;
+}
+
+.card {
+    flex: 1;
+    margin-bottom: 40px;
+}
+
+.card img {
+    max-height: 300px;
+    object-fit: cover;
+}

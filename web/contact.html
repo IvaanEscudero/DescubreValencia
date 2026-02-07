@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Contacto y Envío de Lugares | Turismo Valencia</title>
+    <link rel="icon" type="image/x-icon" href="img/icon.ico">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/base.css">
+    <link rel="stylesheet" href="./css/contact.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+    <my-header></my-header>
+
+    <div class="form-container">
+        <form class="contact-form needs-validation" novalidate>
+            <h2>Contacto y Envío de Lugares</h2>
+            <p>Si tienes alguna consulta o deseas sugerir un lugar para agregar a nuestra página de turismo de Valencia,
+                completa el formulario a continuación.</p>
+
+            <div class="mb-3">
+                <label for="name">Nombre:</label>
+                <input type="text" id="name" name="name" placeholder="Tu nombre completo" class="form-control" required>
+                <div class="invalid-feedback">
+                    Por favor, ingresa tu nombre.
+                </div>
+            </div>
+
+            <div class="mb-3">
+                <label for="email">Correo Electrónico:</label>
+                <input type="email" id="email" name="email" placeholder="correo@ejemplo.com" class="form-control"
+                    required pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$">
+                <div class="invalid-feedback">
+                    Por favor, ingresa un correo válido.
+                </div>
+            </div>
+
+            <div class="mb-3">
+                <label for="phone">Teléfono:</label>
+                <input type="tel" id="phone" name="phone" placeholder="123456789" class="form-control" required
+                    pattern="\d{9}">
+                <div class="invalid-feedback">
+                    Por favor, ingresa un número de teléfono válido (9 dígitos).
+                </div>
+            </div>
+
+            <div class="mb-3">
+                <label for="message">Mensaje:</label>
+                <textarea id="message" name="message" placeholder="Escribe tu mensaje aquí" class="form-control"
+                    required></textarea>
+                <div class="invalid-feedback">
+                    Por favor, ingresa un mensaje.
+                </div>
+            </div>
+
+            <h3>Envío de nuevo lugar</h3>
+
+            <div class="mb-3">
+                <label for="category">Categoría del lugar:</label>
+                <select id="category" name="category" class="form-select" required>
+                    <option value="">Selecciona una categoría...</option>
+                    <option value="restaurante">Restaurante</option>
+                    <option value="museo">Museo</option>
+                    <option value="parque">Parque</option>
+                    <option value="monumento">Monumento</option>
+                    <option value="playa">Playa</option>
+                    <option value="tienda">Tienda</option>
+                </select>
+                <div class="invalid-feedback">
+                    Por favor, selecciona una categoría.
+                </div>
+            </div>
+
+            <div class="mb-3">
+                <label for="placeName">Nombre del Lugar:</label>
+                <input type="text" id="placeName" name="placeName" placeholder="Nombre del lugar" class="form-control"
+                    required>
+                <div class="invalid-feedback">
+                    Por favor, ingresa el nombre del lugar.
+                </div>
+            </div>
+
+            <div class="mb-3">
+                <label for="placeAddress">Dirección del Lugar:</label>
+                <input type="text" id="placeAddress" name="placeAddress" placeholder="Dirección completa"
+                    class="form-control" required>
+                <div class="invalid-feedback">
+                    Por favor, ingresa la dirección del lugar.
+                </div>
+            </div>
+
+            <div class="mb-3">
+                <label for="placeDescription">Descripción del Lugar:</label>
+                <textarea id="placeDescription" name="placeDescription" placeholder="Describe el lugar brevemente"
+                    class="form-control" required></textarea>
+                <div class="invalid-feedback">
+                    Por favor, ingresa una descripción del lugar.
+                </div>
+            </div>
+
+            <div class="mb-3">
+                <label for="placeImage">Imagen del lugar (opcional):</label>
+                <input type="file" id="placeImage" name="placeImage" class="form-control" accept="image/*">
+            </div>
+
+            <button class="btn btn-primary w-100" type="submit">Enviar formulario</button>
+        </form>
+    </div>
+
+    <my-footer></my-footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+    <script src="js/base.js"></script>
+
+    <script>
+        (function () {
+            'use strict'
+
+            var forms = document.querySelectorAll('.needs-validation')
+
+            Array.prototype.slice.call(forms)
+                .forEach(function (form) {
+                    form.addEventListener('submit', function (event) {
+                        if (!form.checkValidity()) {
+                            event.preventDefault()
+                            event.stopPropagation()
+                        }
+
+                        form.classList.add('was-validated')
+                    }, false)
+                })
+        })()
+    </script>
+</body>
+
+</html>

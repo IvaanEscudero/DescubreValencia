@@ -1,0 +1,28 @@
+.card {
+    border-radius: 15px;
+    background-color: var(--deep-slate);
+    overflow: hidden;
+    transition: transform 0.5s ease-in-out;
+}
+
+.card .card-title,
+.card p {
+    color: var(--warm-ivory) !important;
+}
+
+.card img {
+    border-top: 14px;
+    height: 200px;
+    object-fit: cover;
+}
+
+
+.card:hover {
+    transform: scale(1.02);
+}
+
+.card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}

@@ -1,7 +1,7 @@
 # Descubre Valencia - Web de Ocio Interactiva
 
 ## Descripción
-**Descubre Valencia** es una página web con la temática de promoción al turismo y el ocio en la ciudad de Valencia. Este proyecto se centra en el Front-End, integrando tecnologías gráficas avanzadas para ofrecer experiencias interactivas, como un museo virtual en 3D y visualización de datos turísticos.
+Descubre Valencia es una página web con la temática de promoción al turismo y el ocio en la ciudad de Valencia. Este proyecto se centra en el Front-End, integrando tecnologías gráficas avanzadas para ofrecer experiencias interactivas, como un museo virtual en 3D y visualización de datos turísticos.
 
 <p align="center">
   <img src="hub.png" alt="Página principal">
@@ -9,7 +9,7 @@
   <img src="grafico.png" alt="Grafico">
 </p>
 
-El diseño es **Responsive**, adaptándose a dispositivos móviles gracias al uso del framework **Bootstrap**.
+El diseño es **responsive**, adaptándose a dispositivos móviles gracias al uso del framework Bootstrap.
 
 Este proyecto fue desarrollado para la asignatura de Programación Multimedia en la Universitat de València en 2024.
 

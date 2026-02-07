@@ -55,7 +55,7 @@ Debido a las políticas de seguridad de los navegadores (CORS), las texturas 3D 
 
 Necesitas un servidor local. Tienes varias opciones sencillas:
 
-### `Live Server` de VS Code
+### Live Server de VS Code
 
 1. Instala VS Code
 2. Instala la extensión `Live Server`.
